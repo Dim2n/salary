@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 10px;
+}
+
+li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  list-style: none;
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 40px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+p{
+  margin-left: 50px;
+}
+
+.table {
+	margin: 20px; /* Устанавливаем отступы со всех сторон блока */
+  width: calc(100% - 40px); /* Вычисляем ширину блока, учитывая отступы */
+  max-width: 100%;
+	border: 1px solid #dddddd;
+  border-bottom: 2px solid black;
+	border-collapse: collapse; 
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}

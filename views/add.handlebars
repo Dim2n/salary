@@ -1,0 +1,31 @@
+<body>
+
+    <div class="registration">
+
+        <form action="/addHours" method="post" class="addData">
+
+            <label for="date">Дата</label>
+            <input name="date" type="date" required>
+
+            <label for="start-time">Час від:</label>
+            <input type="time" id="start-time" name="start-time" min="00:00" max="23:59" value="07:00" required>
+            <br>
+
+            <label for="end-time">Час до:</label>
+            <input type="time" id="end-time" name="end-time" min="00:00" max="23:59" value="17:00" required>
+            <br>
+
+
+            <label for="salary_for_8hour">Cтавка до 8 годин:</label>
+            <input name="salary_for_8hour" type="text" value="29" required>
+            <br>
+            
+            <label for="salary_after_8hour">Cтавка по 8 годинах:</label>
+            <input name="salary_after_8hour" type="text" value="31" required>
+            <br>
+
+            <button type="submit">Додати</button>
+        </form>
+    </div>
+
+</body>

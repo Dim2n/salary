@@ -1,0 +1,47 @@
+<div>
+
+    <h1>Статистика по годинах</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Дата</th>
+                <th>Ставка до 8 годин</th>
+                <th>Ставка по 8 годинах</th>
+                <th>Початок змiни</th>
+                <th>Кiнець змiни</th>
+                {{!-- <th>Сума</th> --}}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each salaryArray}}
+                <tr>
+                    <th>{{date}}</th>
+                    <th>{{salaryFor8hour}}</th>
+                    <th>{{salaryAfter8hour}}</th>
+                    <th>{{startTime}}</th>
+                    <th>{{endTime}}</th>
+                    {{!-- <th><button class="btn" name="{{date}}" onclick="func()">Видалити</button></th> --}}
+                    <th><form action="/delete" method="post">
+                        <label for="date"></label>
+                        <input class="btn" type="hidden" name="date" value="{{date}}">
+                        <button class="btn">Видалити</button>
+                    </form></th>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+        <h3>Сума: {{sumSalary}}</h3>
+    
+</div>
+
+<script>
+    function func(){
+        console.log(event.target.name);
+        fetch('http://localhost:3000/delete', {
+            method : 'POST',
+            /*body : event.target.name*/
+            body : JSON.stringify({name : event.target.name})
+        }).then(console.log('Success'));
+    }
+</script>
